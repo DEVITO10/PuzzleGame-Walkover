@@ -1,0 +1,156 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+/*Main Structure*/
+.tic-tac-toe-row{
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*Different partions of the Structure*/
+.tic-tac-toe-left, .tic-tac-toe-center,.tic-tac-toe-right{
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Left Structure - The Title*/
+.tic-tac-toe-left-content{
+    width: 90%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: auto;
+}
+.tic-tac-toe-left-content img{
+    height: 50%;
+}
+.tic-tac-toe-left-content .message{
+    margin: 10px;
+    width: 90%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Center Structure - The Board*/
+.tic-tac-toe-board{
+    width: 80%;
+    height: 80%;
+    border: 10px solid #ffa54f;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+}
+.tic-tac-toe-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    height: 100%;
+    background-color: black;
+    border:12px soli red;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+.tic-tac-toe-item1, .tic-tac-toe-item2, .tic-tac-toe-item3, .tic-tac-toe-item4, .tic-tac-toe-item5, .tic-tac-toe-item6, .tic-tac-toe-item7, .tic-tac-toe-item8, .tic-tac-toe-item9{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url("images/blank.png");
+    background-size: 100% 100%;
+}
+.tic-tac-toe-overlay{
+    width: 100%;
+    height: 100%;
+    border: 5px solid black;
+    margin: auto;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+.tic-tac-toe-overlay.active{
+    transform: scale(1);
+}
+
+/*Right Structure - The Rules and The Result*/
+.tic-tac-toe-right-content{
+    width: 90%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.tic-tac-toe-rules{
+    width: 90%;
+    height: 40%;
+    border: 5px solid red;
+    border-radius: 10px;
+    background-color: rgba(255,0,0,0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.tic-tac-toe-turn{
+    width: 90%;
+    height: 10%;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.2);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tic-tac-toe-winner{
+    width: 90%;
+    height: 10%;
+    border: 5px solid green;
+    border-radius: 10px;
+    background-color: rgba(0,255,0,0.2);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+.tic-tac-toe-winner.active{
+    transform: scale(1);
+}
+.tic-tac-toe-right-content #replay{
+    width: 90%;
+    height: 10%;
+    background-color: rgb(133, 204, 27);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}
