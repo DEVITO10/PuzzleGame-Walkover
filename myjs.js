@@ -1,17 +1,9 @@
-function show_hide_game_button(){
-    if(document.getElementById("tic-tac-toe-button").style.display == "block"){
-        document.getElementById("tic-tac-toe-button").style.display = "none";
-        document.getElementById("sudoku-button").style.display = "none";
-    }
-    else{
-        document.getElementById("tic-tac-toe-button").style.display = "block";
-        document.getElementById("sudoku-button").style.display = "block";
-    }
+function goToHome(){
+    document.getElementById("ttt-game-div").classList.remove("active");
 }
 function play_ttt(){
     document.getElementById("ttt-game-div").style.backgroundImage = "url('images/background-ttt.jpg')";
     nextTurn('Player 1');
-    show_hide_game_button();
     document.getElementById("ttt-game-div").classList.add("active");
 }
 function play_sudoku(){

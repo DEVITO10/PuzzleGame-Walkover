@@ -22,7 +22,10 @@ html,body{
     height: 15%;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: black;
+    color: white;
+    font-size: xx-large;
+    border: 5px ridge white;
 }
 
 #game{
@@ -31,8 +34,9 @@ html,body{
     height: 85%;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: none;
     position: relative;
+    border:5px ridge white;
 }
 
 #tic-tac-toe, #sudoku{
@@ -49,6 +53,7 @@ html,body{
     border: 10px groove rgb(216, 103, 37);
     border-radius: 10px;
     transition: transform 0.2s;
+    background-color: white;
 }
 #tic-tac-toe-button:hover{
     transform: scale(1.2);
@@ -76,6 +81,7 @@ html,body{
     border: 10px groove rgb(216, 103, 37);
     border-radius: 10px;
     transition: transform 0.2s;
+    background-color: white;
 }
 #sudoku-button:hover{
     transform: scale(1.2);

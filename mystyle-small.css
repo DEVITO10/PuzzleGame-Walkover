@@ -2,4 +2,16 @@
     .main-body{
         height: 90%;
     }
+    #heading{
+        font-size: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #heading .col-sm-10{
+        display: none;
+    }
+    #tic-tac-toe-button, #sudoku-button{
+        width: 80%;
+        height: 70%;
+    }
 }
