@@ -15,13 +15,19 @@
 <body>
     <div class="main-body">
         <!--Top Heading-->
-        <div class="row" id="heading">
-            <div class="col-sm-10 col-md-10">
-                <img>
+        <div class="grid-header">
+            <div class="grid-item-logo">
+                <img src="images/logo.png" alt="Main Logo">
+            </div>
+            <div class="grid-item-name">
                 <label>PuzzleGame</label>
             </div>
-            <div class="col-sm-1"><div onclick="goToHome()" style="cursor: pointer;"><i class="fa fa-home"></i></div></div>
-            <div class="col-sm-1"><div onclick="goToHome()" style="cursor: pointer;"><i class="fa fa-question-circle"></i></div></div>
+            <div class="grid-item-home">
+                <div onclick="goToHome()" style="cursor: pointer;"><i class="fa fa-home"></i></div>
+            </div>
+            <div class="grid-item-help">
+                <div onclick="openHelp()" style="cursor: pointer;"><i class="fa fa-question-circle"></i></div>
+            </div>
         </div>
         <!--Game Container-->
         <div class="row" id="game">
@@ -33,7 +39,7 @@
             <div class="row tic-tac-toe-row">
                 <div class="col-sm-12 col-md-3 tic-tac-toe-left">
                     <div class="tic-tac-toe-left-content">
-                        <img src="images/logo.png" alt="">
+                        <img src="images/logo-ttt.png" alt="Tic-Tac-Toe Logo">
                         <div class="message">
                             A Tic-Tac-Toe Game made with HTML, CSS, JavaScript and <br><i class="fa fa-heart" style="color:red"></i>
                         </div>
@@ -78,6 +84,50 @@
             <div class="col-sm-12 col-md-6" id="sudoku">
                 <button id="sudoku-button" onclick="play_sudoku()"></button>
             </div>
+            <div id="ttt-game-div">
+                <div class="row tic-tac-toe-row">
+                    <div class="col-sm-12 col-md-3 tic-tac-toe-left">
+                        <div class="tic-tac-toe-left-content">
+                            <img src="images/logo-sudoku.png" alt="Sudoku Logo">
+                            <div class="message">
+                                A Sudoku Game made with HTML, CSS, JavaScript and <br><i class="fa fa-heart" style="color:red"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 tic-tac-toe-center">
+                        <div class="tic-tac-toe-board">
+                            <div class="tic-tac-toe-overlay" id="tic-tac-toe-overlay">
+                                match end !
+                            </div>
+                            <div class="tic-tac-toe-grid">
+                                <div class="tic-tac-toe-item1" onclick="check(1)" id="1"></div>
+                                <div class="tic-tac-toe-item2" onclick="check(2)" id="2"></div>
+                                <div class="tic-tac-toe-item3" onclick="check(3)" id="3"></div>
+                                <div class="tic-tac-toe-item4" onclick="check(4)" id="4"></div>
+                                <div class="tic-tac-toe-item5" onclick="check(5)" id="5"></div>
+                                <div class="tic-tac-toe-item6" onclick="check(6)" id="6"></div>
+                                <div class="tic-tac-toe-item7" onclick="check(7)" id="7"></div>
+                                <div class="tic-tac-toe-item8" onclick="check(8)" id="8"></div>
+                                <div class="tic-tac-toe-item9" onclick="check(9)" id="9"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 tic-tac-toe-right">
+                        <div class="tic-tac-toe-right-content">
+                            <div class="tic-tac-toe-rules">
+                                Rules:<br>
+                                <ul>
+                                    <li>Player 1 goes first as 'X'.</li>
+                                    <li>Player 2 goes second as 'O'.</li>
+                                </ul>
+                            </div>
+                            <div class="tic-tac-toe-turn" id="turn"></div>
+                            <div class="tic-tac-toe-winner" id="winner"></div>
+                            <button id="replay" onclick="reset()">Replay</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
 
         </div>
     </div>
