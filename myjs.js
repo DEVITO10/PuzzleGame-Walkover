@@ -1,5 +1,6 @@
 function goToHome(){
     document.getElementById("ttt-game-div").classList.remove("active");
+    document.getElementById("sudoku-game-div").classList.remove("active");
 }
 function play_ttt(){
     document.getElementById("ttt-game-div").style.backgroundImage = "url('images/background-ttt.jpg')";
@@ -7,7 +8,8 @@ function play_ttt(){
     document.getElementById("ttt-game-div").classList.add("active");
 }
 function play_sudoku(){
-
+    document.getElementById("sudoku-game-div").style.backgroundImage = "url('images/background-sudoku.png')";
+    document.getElementById("sudoku-game-div").classList.add("active");
 }
 
 
@@ -77,7 +79,7 @@ function tie(){
     document.getElementById("winner").classList.add("active")
     document.getElementById("tic-tac-toe-overlay").classList.add("active");
 }
-function reset(){
+function reset_ttt(){
     next_symbol = player[0];
     nextTurn(next_symbol[2]);
     count=0;

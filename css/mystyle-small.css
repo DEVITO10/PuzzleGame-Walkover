@@ -1,6 +1,13 @@
 @media screen and (max-device-width: 480px){
     .main-body{
         height: 90%;
+        width: 90%;
+    }
+    .grid-header{
+        grid-template-columns: 20% auto 17% 17%;
+    }
+    .main-body .grid-header .grid-item-name label{
+        display:none;
     }
     #heading{
         font-size: 100%;

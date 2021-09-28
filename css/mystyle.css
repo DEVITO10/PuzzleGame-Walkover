@@ -4,7 +4,7 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("images/background.jpg");
+    background-image: url("../images/background.jpg");
     background-size: 100% 100%;
 }
 
@@ -29,6 +29,7 @@ html,body{
     display: grid;
     grid-template-columns: 10% 70% 10% 10%;
     grid-template-rows: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .grid-header .grid-item-logo{
     display: flex;
@@ -60,7 +61,7 @@ html,body{
 #tic-tac-toe-button{
     width: 50%;
     height: 50%;
-    background-image: url("images/logo-ttt.png");
+    background-image: url("../images/logo-ttt.png");
     background-size: 100% 100%;
     border: 10px groove rgb(216, 103, 37);
     border-radius: 10px;
@@ -88,7 +89,7 @@ html,body{
 #sudoku-button{
     width: 50%;
     height: 50%;
-    background-image: url("images/logo-sudoku.png");
+    background-image: url("../images/logo-sudoku.png");
     background-size: 100% 100%;
     border: 10px groove rgb(216, 103, 37);
     border-radius: 10px;
