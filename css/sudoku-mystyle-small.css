@@ -24,13 +24,10 @@
     #sudoku-grid{
         grid-column-gap: 3px;
         grid-row-gap: 3px;
+        overflow: auto;
     }
     .sudoku-board{
         height: 100%;
-    }
-    .sudoku-grid{
-        grid-row-gap: 5px;
-        grid-column-gap: 5px;
     }
     .sudoku-grid-smallest{
         font-size: 50%;
