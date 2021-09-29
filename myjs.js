@@ -29,7 +29,7 @@ var wins = [
     new Map([[3,"n"],[5,"n"],[7,"n"]]),
 ];
 function nextTurn(turn){
-    document.getElementById("turn").innerHTML="Turn: "+turn;
+    document.getElementById("ttt-turn").innerHTML="Turn: "+turn;
 }
 function check(item){
     var url="url('"+next_symbol[0]+"')";
@@ -63,21 +63,21 @@ function isWinner(){
                +arr.next().value
                +arr.next().value;
         if(val=="xxx" || val=="ooo"){
-            declareWinner();
+            declareTttWinner();
             break;
         }
         val="";
     }
 }
-function declareWinner(){
+function declareTttWinner(){
     nextTurn(' ');
-    document.getElementById("winner").innerHTML=next_symbol[2]+" wins !";
-    document.getElementById("winner").classList.add("active")
+    document.getElementById("ttt-winner").innerHTML=next_symbol[2]+" wins !";
+    document.getElementById("ttt-winner").classList.add("active")
     document.getElementById("tic-tac-toe-overlay").classList.add("active");
 }
 function tie(){
-    document.getElementById("winner").innerHTML="It is a Tie !";
-    document.getElementById("winner").classList.add("active")
+    document.getElementById("ttt-winner").innerHTML="It is a Tie !";
+    document.getElementById("ttt-winner").classList.add("active")
     document.getElementById("tic-tac-toe-overlay").classList.add("active");
 }
 function reset_ttt(){
@@ -89,9 +89,9 @@ function reset_ttt(){
         document.getElementById(items[i]).style.backgroundImage="url('images/blank.png'";
         document.getElementById(items[i]).style.pointerEvents="all";
     }
-    document.getElementById("winner").innerHTML=" ";
+    document.getElementById("ttt-winner").innerHTML=" ";
     document.getElementById("tic-tac-toe-overlay").classList.remove("active");
-    document.getElementById("winner").classList.remove("active");
+    document.getElementById("ttt-winner").classList.remove("active");
     wins = [
         new Map([[1,"n"],[2,"n"],[3,"n"]]),
         new Map([[4,"n"],[5,"n"],[6,"n"]]),
@@ -107,18 +107,20 @@ function reset_ttt(){
 
 //JS for Sudoku
 var the_sudoku = [
-    [5,4,3,6,1,2],
-    [1,2,6,3,4,5],
-    [4,2,5,3,6,1],
-    [6,1,3,2,5,4],
-    [2,3,4,1,5,6],
-    [5,6,1,4,3,2]
+    ['5','4','3','6','1','2'],
+    ['1','2','6','3','4','5'],
+    ['4','2','5','3','6','1'],
+    ['6','1','3','2','5','4'],
+    ['2','3','4','1','5','6'],
+    ['5','6','1','4','3','2']
 ]
+var ans = [];
+var input_ans = [];
 function create_sudoku(){
     var inhtml = "";
     let sudoku_element = document.getElementById("sudoku-grid");
     var k = 1;
-    var ans = [];
+    ans = [];
     for(let i=0 ; i<6 ; i++){
         inhtml += "<div class='sudoku-grid-smaller'>";
         for(let j=0 ; j<6 ; j++){
@@ -127,7 +129,7 @@ function create_sudoku(){
                 inhtml += the_sudoku[i][j];
             }
             else{
-                inhtml += "<input type='text' maxlength='1' oninput='sudoku_input()'>";
+                inhtml += "<input type='text' class='sudoku-inputs' maxlength='1' oninput='sudoku_input()'>";
                 ans.push(the_sudoku[i][j]);
             }
             inhtml += "</div>"
@@ -138,5 +140,27 @@ function create_sudoku(){
     sudoku_element.innerHTML = inhtml;
 }
 function sudoku_input(){
-
+    let sudoku_input_elements = document.getElementsByClassName("sudoku-inputs");
+    input_ans = [];
+    for(var ele = 0; ele < sudoku_input_elements.length ; ele++)
+        input_ans.push(sudoku_input_elements[ele].value);
+    let result = check_sudoku();
+    if(result)
+        declareSudokuWinner();
+}
+function check_sudoku(){
+    for(let i in ans)
+        if(ans[i]!=input_ans[i])
+            return false;
+    return true;
+}
+function declareSudokuWinner(){
+    document.getElementById("sudoku-winner").innerHTML="You win !";
+    document.getElementById("sudoku-winner").classList.add("active");
+    document.getElementById("sudoku-overlay").classList.add("active");
+}
+function reset_sudoku(){
+    create_sudoku();
+    document.getElementById("sudoku-overlay").classList.remove("active");
+    document.getElementById("sudoku-winner").classList.remove("active")
 }

@@ -35,16 +35,19 @@
         width: 50%;
         height: 90%;
         border: 2px solid red;
+        font-size: 60%;
     }
     .sudoku-winner{
         width: 50%;
         height: 16%;
         margin-left: 5px;
         border: 2px solid green;
+        font-size: 60%;
     }
     .sudoku-right-content #replay{
         width: 50%;
         height: 16%;
         margin-left: 5px;
+        font-size: 50%;
     }
 }

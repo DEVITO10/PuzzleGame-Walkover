@@ -35,22 +35,26 @@
         width: 50%;
         height: 90%;
         border: 2px solid red;
+        font-size: 60%;
     }
     .tic-tac-toe-turn{
         width: 50%;
         height: 16%;
         margin-left: 5px;
         border:2px solid black;
+        font-size: 60%;
     }
     .tic-tac-toe-winner{
         width: 50%;
         height: 16%;
         margin-left: 5px;
         border: 2px solid green;
+        font-size: 60%;
     }
     .tic-tac-toe-right-content #replay{
         width: 50%;
         height: 16%;
         margin-left: 5px;
+        font-size: 50%;
     }
 }
