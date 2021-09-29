@@ -8,6 +8,7 @@ function play_ttt(){
     document.getElementById("ttt-game-div").classList.add("active");
 }
 function play_sudoku(){
+    create_sudoku();
     document.getElementById("sudoku-game-div").style.backgroundImage = "url('images/background-sudoku.png')";
     document.getElementById("sudoku-game-div").classList.add("active");
 }
@@ -105,3 +106,37 @@ function reset_ttt(){
 
 
 //JS for Sudoku
+var the_sudoku = [
+    [5,4,3,6,1,2],
+    [1,2,6,3,4,5],
+    [4,2,5,3,6,1],
+    [6,1,3,2,5,4],
+    [2,3,4,1,5,6],
+    [5,6,1,4,3,2]
+]
+function create_sudoku(){
+    var inhtml = "";
+    let sudoku_element = document.getElementById("sudoku-grid");
+    var k = 1;
+    var ans = [];
+    for(let i=0 ; i<6 ; i++){
+        inhtml += "<div class='sudoku-grid-smaller'>";
+        for(let j=0 ; j<6 ; j++){
+            inhtml += "<div class='sudoku-grid-smallest'>";
+            if(Math.floor(Math.random() * 2)){
+                inhtml += the_sudoku[i][j];
+            }
+            else{
+                inhtml += "<input type='text' maxlength='1' oninput='sudoku_input()'>";
+                ans.push(the_sudoku[i][j]);
+            }
+            inhtml += "</div>"
+            k += 1;
+        }
+        inhtml += "</div>";
+    }
+    sudoku_element.innerHTML = inhtml;
+}
+function sudoku_input(){
+
+}
