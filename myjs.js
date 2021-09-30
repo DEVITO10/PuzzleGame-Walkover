@@ -2,6 +2,17 @@ function goToHome(){
     document.getElementById("ttt-game-div").classList.remove("active");
     document.getElementById("sudoku-game-div").classList.remove("active");
 }
+function openHelp(){
+    if(document.getElementById("help").className == "fa fa-question-circle")
+    {
+        document.getElementById("puzzlehelp").classList.add("active");
+        document.getElementById("help").className = "fa fa-times";
+    }
+    else{
+        document.getElementById("puzzlehelp").classList.remove("active");
+        document.getElementById("help").className = "fa fa-question-circle";
+    }
+}
 function play_ttt(){
     document.getElementById("ttt-game-div").style.backgroundImage = "url('images/background-ttt.jpg')";
     nextTurn('Player 1');

@@ -29,11 +29,12 @@
                 <div onclick="goToHome()" style="cursor: pointer;"><i class="fa fa-home"></i></div>
             </div>
             <div class="grid-item-help">
-                <div onclick="openHelp()" style="cursor: pointer;"><i class="fa fa-question-circle"></i></div>
+                <div onclick="openHelp()" style="cursor: pointer;"><i class="fa fa-question-circle" id="help"></i></div>
             </div>
         </div>
         <!--Game Container-->
         <div class="row" id="game">
+            
             <!--Tic-Tac-Toe-->
             <div class="col-sm-12 col-md-6" id="tic-tac-toe">
                 <button id="tic-tac-toe-button" onclick="play_ttt()" style="display:block"></button>
@@ -118,7 +119,74 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
+
+            <!--Show help-->
+            <div id="puzzlehelp" style="overflow: auto">
+                <center><h2>Help</h2></center>
+                <hr style="height: 5px;">
+                Are you stuck ? Maybe this can Help <br> You can access this Help section at any moment. <em>Have Fun Playing</em>.
+                <br><br>
+                <ul>
+                    <li>Choosing a game:
+                        <br>
+                        You can only choose one game at a time. Click/Press on the button and the game will start-up.
+                        <br>
+                        <img src="./images/help/choose.jpg" alt="Choosing a game" style="width: 250px; height:125px; margin:10px">
+                    </li>
+                    <br>
+                    <li>Exiting from a game:
+                        <br>
+                        If to change the game or just want to go to the home screen, click/press on the home button given at the top right corner.
+                        <br>
+                        You can locate it just beside the help button.
+                        <br>
+                        <img src="./images/help/home.jpg" alt="Going Home" style="width: 150px; height:60px; margin:10px">
+                    </li>
+                    <br>
+                    <li>Rules of the Game:
+                        <br>
+                        For every game the playing rules are given on the right side of the main playing board.
+                        <br>Read them carefully before starting the game.
+                    </li>
+                    <br>
+                    <li>Tic-Tac-Toe
+                        <br>
+                        This is a two player game.
+                        <ul>
+                            <li>The Player 1 starts first as 'X' followed by Player 2 as 'O'.
+                                <br>If confused about the turn, the 'Turn' counter will display which player's turn it is.
+                                <br>
+                                <img src="./images/help/turn-ttt.jpg" alt="Turn" style="width: 200px; height:60px; margin:10px">
+                            </li>
+                            <li>When any of the player wins the game will stop and the winner's name will pop-up on the right side of the board.
+                                <br>
+                                <img src="./images/help/winner-ttt.jpg" alt="Replay Tic-Tac-Toe" style="width: 200px; height:60px; margin:10px">
+                            </li>
+                            <li>As soon as any player wins the game will stop and you will have to start another game using the 'Replay' button.
+                                <br>'Replay' button is present at the bottom of the right side of the board.
+                                <br>
+                                <img src="./images/help/replay-ttt.jpg" alt="Replay Tic-Tac-Toe" style="width: 200px; height:60px; margin:10px">
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>Sudoku
+                        <br>This is a one player game.
+                        <br>There can be many ways to solve this Sudoku, but there is only one correct way to solve this Sudoku.
+                        <ul>
+                            <li>As soon as you correctly solve the Sudoku the game will stop and you will be declared as winner.
+                                <br>
+                                <img src="./images/help/complete-sudoku.jpg" alt="Complete Sudoku" style="width: 200px; height:60px; margin:10px">
+                            </li>
+                            <li>You can reset or create a new board using the 'Replay' button given on the right bottom side the board.
+                                <br>
+                                <img src="./images/help/replay-sudoku.jpg" alt="Complete Sudoku" style="width: 200px; height:60px; margin:10px">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
         </div>
     </div>
